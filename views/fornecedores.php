@@ -2,7 +2,7 @@
 require_once __DIR__ . "/../config/database.php";
 $pdo = db();
 
-$produtos = $pdo->query("SELECT * FROM fornecedores ORDER BY id DESC")->fetchAll();
+$fornecedores = $pdo->query("SELECT * FROM fornecedores ORDER BY id DESC")->fetchAll();
 ?>
 
 <!doctype html>
@@ -18,11 +18,11 @@ $produtos = $pdo->query("SELECT * FROM fornecedores ORDER BY id DESC")->fetchAll
 
   <div class="container">
     <h1> Fornecedores</h1>
-    <p class="hint">
- <a href="/TESTE-PHP/?page=fornecedores">Fornecedores</a>
-<a href="/TESTE-PHP/?page=produtos">Produtos</a>
-
-</p>
+  <div class="topnav">
+  <a class="navbtn" href="/TESTE-PHP/?page=fornecedores">Fornecedores</a>
+  <a class="navbtn" href="/TESTE-PHP/?page=produtos">Produtos</a>
+  <a class="navbtn navbtn-ghost" href="/TESTE-PHP/?page=vinculos">Vínculos</a>
+</div>
 
     <div id="toast" class="toast" style="display:none;"></div>
 
