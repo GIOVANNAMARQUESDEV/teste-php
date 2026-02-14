@@ -7,8 +7,8 @@
   --muted: rgba(255,255,255,.65);
   --muted2: rgba(255,255,255,.45);
 
-  --accent: #7b61ff;      /* roxo */
-  --accent2: #43e7ad;     /* verde água */
+  --accent: #7b61ff;
+  --accent2: #43e7ad;
   --warn: #ffb020;
   --danger: #ff5b5b;
 
@@ -245,4 +245,19 @@ button:active{ transform: translateY(0px) scale(.99); }
 @media (max-width: 720px){
   .grid{ grid-template-columns: 1fr; }
   .container{ padding: 0 14px 36px; }
+}
+
+body.page-fornecedores{
+  --accent: #7b61ff;
+  --accent2: #43e7ad;
+}
+
+body.page-produtos{
+  --accent: #ff4fd8;
+  --accent2: #7b61ff;
+}
+
+body.page-vinculos{
+  --accent: #43e7ad;
+  --accent2: #ffd54a;
 }
