@@ -1,9 +1,10 @@
 <?php
-require_once __DIR__ . "/views/produtos.php";
+require_once __DIR__ . "/../config/database.php";
 $pdo = db();
 
 $produtos = $pdo->query("SELECT * FROM produtos ORDER BY id DESC")->fetchAll();
 ?>
+
 <!doctype html>
 <html lang="pt-br">
 <head>
