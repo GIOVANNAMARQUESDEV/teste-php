@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . "/../config/database.php";
+require_once __DIR__ . "/views/fornecedores.php";
 $pdo = db();
 
 $fornecedores = $pdo->query("SELECT * FROM fornecedores ORDER BY id DESC")->fetchAll();
@@ -13,14 +13,20 @@ $fornecedores = $pdo->query("SELECT * FROM fornecedores ORDER BY id DESC")->fetc
   <link rel="stylesheet" href="assets/css/app.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
-<body>
+<body class="page-fornecedores">
+
   <div class="container">
-    <h1>Fornecedores</h1>
+    <h1> Fornecedores</h1>
+    <p class="hint">
+ <a href="/TESTE-PHP/?page=fornecedores">Fornecedores</a>
+<a href="/TESTE-PHP/?page=produtos">Produtos</a>
+
+</p>
 
     <div id="toast" class="toast" style="display:none;"></div>
 
     <div class="card">
-      <h2>Novo fornecedor</h2>
+      <h2> Novo fornecedor </h2>
 
       <form id="formFornecedor">
         <div class="grid">
